@@ -8,6 +8,18 @@ module.exports = {
             test: /\.(scss|css)$/,
             use: ['style-loader', 'css-loader', 'sass-loader'],
           },
+          {
+            test: /\.(jpg|png)$/,
+            type: 'asset/resource',
+          },
+          
+          {
+            test:/\.html$/,
+            use: [
+              'html-loader'
+            ]
+          },
+          
         ],
     },
     plugins: [
@@ -22,8 +34,11 @@ module.exports = {
         })
     ], 
     mode: 'development', 
+    entry: './src/index.js',
     output: {
-        clean: true
+        //clean: true,
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     }, 
     devServer: {
         static: './',
