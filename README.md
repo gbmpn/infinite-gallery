@@ -1,6 +1,6 @@
-# webpack-starter
+# infinite webgl gallery
 
-Basic modern webpack dev server experimentation:
+Source code for the infinite webgl gallery from 
 
 Use npm install then npm run dev to start a dev server and compile js/scss files
 
